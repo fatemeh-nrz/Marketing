@@ -5,7 +5,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 const Shop = () => {
   return (
     <>
-      <h1>Shop</h1>
+      <h1 className="title" >Shop</h1>
       {/* //////////////////////////////////////////// */}
       <div className="row">
   <div className="col-sm-6 mb-3 mb-sm-0">
@@ -97,6 +97,7 @@ const Shop = () => {
     <div className="card-body" >
         <h2 className="card-title">Watch</h2>
       <img src="https://image.torob.com/base/images/FY/Cp/FYCpn0VV0LP5uFT6.jpg_/280x280.jpg" alt=""  />
+      <h5>The best Household appliances in the world</h5> 
       <Link to="watch">
         <a href="#" className="btn btn-primary">More...</a>
         </Link>

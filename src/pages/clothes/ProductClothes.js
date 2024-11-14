@@ -1,12 +1,15 @@
 import React, { useContext, useState } from "react";
-import { ShopContext } from "../../context/shopContext";
-const Product = (props) => {
+import  {ShopContextWithCustumHook}  from '../../context/shopContextWithCustumHook'
+import ShopContextWithCustumHookProvider from "../../context/shopContextWithCustumHook";
+// import { ShopContext } from "../../context/shopContext";
+
+const ProductClothes = (props) => {
   const { id, productName, price, productImage } = props.data;
 
-  const {cartItems, addToCart, removeFromCart } = useContext(ShopContext);
+  const {cartItems, addToCart, removeFromCart } = useContext(ShopContextWithCustumHook);
   const isInCart =cartItems?.some((item)=>item.id ===id)
   return (
-    <div className="col-3">
+    <div className="col-3 "  >   
       <img src={productImage} className="w-100 h-50 rounded-circle"></img>
       <h5>{productName}</h5>
       <p>Price:{price}$</p>
@@ -16,4 +19,4 @@ const Product = (props) => {
     </div>
   );
 };
-export default Product;
+export default ProductClothes;
